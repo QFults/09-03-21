@@ -1,7 +1,9 @@
+const render = require('./lib/htmlRenderer.js')
 const Student = require('./lib/Student.js')
 const Teacher = require('./lib/Teacher.js')
 const Faculty = require('./lib/Faculty.js')
 const { prompt } = require('inquirer')
+const { writeFile } = require('fs')
 
 const school = []
 
@@ -93,7 +95,10 @@ const menu = () => {
           buildPerson()
           break
         case 'Finish':
-          console.log(school)
+          writeFile('./output/school.html', render(school), err => {
+            if (err) { console.log(err) }
+            console.log('School Built!')
+          })
           break
       }
     })
