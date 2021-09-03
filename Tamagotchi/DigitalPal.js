@@ -1,5 +1,5 @@
 class DigitalPal {
-  constructor() {
+  constructor () {
     this.hungry = false
     this.sleepy = false
     this.bored = true
@@ -8,7 +8,7 @@ class DigitalPal {
     this.houseCondition = 100
   }
 
-  feed() {
+  feed () {
     if (this.hungry) {
       console.log('That was yummy!')
       this.hungry = false
@@ -18,7 +18,7 @@ class DigitalPal {
     }
   }
 
-  sleep() {
+  sleep () {
     if (this.sleepy) {
       console.log('Zzzzzz')
       this.sleepy = false
@@ -29,7 +29,7 @@ class DigitalPal {
     }
   }
 
-  play() {
+  play () {
     if (this.bored) {
       console.log('Yay! Let us play!')
       this.bored = false
@@ -39,16 +39,16 @@ class DigitalPal {
     }
   }
 
-  increaseAge() {
+  increaseAge () {
     this.age++
     console.log(`Happy Birthday to me! I am ${this.age} days old!`)
   }
 
-  bark() {
+  bark () {
     console.log('Woof! Woof!')
   }
 
-  goOutside() {
+  goOutside () {
     if (!this.outside) {
       console.log('Yay! I love the outdoors!')
       this.outside = true
@@ -58,7 +58,7 @@ class DigitalPal {
     }
   }
 
-  goInside() {
+  goInside () {
     if (this.outside) {
       console.log('Do we have to? Fine...')
       this.outside = false
@@ -67,7 +67,7 @@ class DigitalPal {
     }
   }
 
-  destroyFurniture() {
+  destroyFurniture () {
     if (this.houseCondition <= 0) {
       console.log('The furniture is already destroyed! HAHAHA')
     } else {
@@ -78,7 +78,7 @@ class DigitalPal {
     }
   }
 
-  buyNewFurniture() {
+  buyNewFurniture () {
     this.houseCondition += 50
     console.log('Are you sure about that?')
   }
